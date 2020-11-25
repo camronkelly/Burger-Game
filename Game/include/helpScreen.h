@@ -1,0 +1,33 @@
+#ifndef HELPSCREEN_H
+#define HELPSCREEN_H
+#include <windows.h>
+
+#include<gl/gl.h>
+#include<iostream>
+
+using namespace std;
+
+
+class helpScreen
+{
+    public:
+        helpScreen();
+        virtual ~helpScreen();
+        GLint initGL();
+        GLint drawGLScene();
+        GLvoid resizeGLScene(GLsizei, GLsizei);
+
+        int windMsg(HWND,UINT, WPARAM,LPARAM);
+
+
+        WPARAM wParam;
+        float screenHeight;
+        float screenWidth;
+
+
+    protected:
+
+    private:
+};
+
+#endif // HELPSCREEN_H
